@@ -9,7 +9,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 .site-container {
-    margin: 2rem auto;
+    margin: 11rem auto;
     max-width: calc(100% - 80px);
 }
 .task-container {
@@ -43,7 +43,7 @@ body {
     margin: 1rem 0;
     color: #22447b;
 }
-.task-content .card-list {
+.task-content .card-listt {
     font-size: 1rem;
     line-height: 1.5rem;
     color: #6b82a7;
