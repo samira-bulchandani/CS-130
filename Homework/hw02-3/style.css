@@ -247,15 +247,27 @@ article {
 /**************************/
 
 /* Your Code Here */
-@media screen and (max-width: 700px) {
-    aside {
-      width: 100%;
-      height: auto;
-      position: relative;
+@media screen and (max-width: 724px) {
+    body {
+        overflow: hidden;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "main" "bottom";
+        height: 100vh;
     }
-    aside a {float: left;}
-    div.content {margin-left: 0;}
-    display: none;
+
+    .artist-card {
+        width: 40%;
+    }
+
+    header {
+        left:0px;
+        width: 100%;
+    }
+    
+    aside {
+    display: none;}
 }
 
 /* Float four columns side by side */
