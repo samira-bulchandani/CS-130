@@ -1,0 +1,264 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+/* Your Code Here */
+aside {
+        display : flex;
+        font-family: "";
+        line-height: 1.9;
+    }
+
+aside a.selected {
+    border-left: solid 3px #1DB954;
+    margin-left: ;
+    
+}
+
+i.fa-spotify{
+    margin-right: 0.3rem;
+    margin-left: 1rem;
+    font-size: xx-large;
+}
+
+i.fa-home{
+    margin-right: 0.9rem;
+    letter-spacing: 0.1rem;
+    text-indent: 2rem;
+}
+
+i.fa-search{
+    margin-right: 0.9rem;
+    letter-spacing: 0.1rem;
+    text-indent: 2rem;
+}
+
+i.fa-headphones-alt{
+    margin-right: 0.9rem;
+    letter-spacing: 0.1rem;
+    text-indent: 2rem;
+}
+
+
+   
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+/* Your Code Here */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+    font-size: 18px;
+    line-height: 3rem;
+    word-spacing: 20px;
+}
+
+nav>a.selected {
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #1DB954;
+    text-decoration-style: solid;
+}
+
+.play-button {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    background:#1DB954;
+    border-radius: 22px;
+    border-color: transparent;
+    color: white;
+    align-self: flex-end;
+   
+    }
+.play-button { 
+    top: 44px;
+    left: 59px;
+}
+
+.artist-card:hover .play-button { 
+	opacity: 1;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 50px;
+    line-height: 3;
+    gap: 30px;
+    padding: 1rem;
+    padding-left: 1rem;
+
+}
+
+#UPGRADE {
+    border: solid 1px rgba(255, 255, 255, 0.832);
+    border-radius: 30px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#PROFILE {
+    border-radius: 100px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: rgb(59, 59, 59);
+}
+
+i.fa-user {
+    margin-right: 0.5rem;
+}
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+/* Your Code Here */
+article {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.albumcover {
+    width: 18vh;
+    height: 18vh;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12.5%
+}
+.artist-card {
+    background: rgba(254, 254, 254, 0.203);
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 13rem;
+    height: 20rem;
+    padding: 2rem;
+}
+
+.artist-card>div {
+    display: flex;
+    flex-direction: column;
+} 
+.artist-card:hover {
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    cursor: pointer;
+}
+
+.card-footer {
+    height: 1fr;
+    margin-left: 5%;
+    margin-top: 10%;
+    line-height: 1rem;
+}
+
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+/* Your Code Here */
+@media screen and (max-width: 700px) {
+    aside {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    aside a {float: left;}
+    div.content {margin-left: 0;}
+    display: none;
+}
+
+/* Float four columns side by side */
+
+   
+  
