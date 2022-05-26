@@ -149,6 +149,8 @@ const handleTrackClick = (ev) => {
     const previewUrl = ev.currentTarget.getAttribute('data-preview-track');
     audioPlayer.setAudioFile(previewUrl);
     audioPlayer.play();
+    const track_preview = ev.currentTarget.innerHTML;
+    document.querySelector("#current-track").innerHTML = track_preview;
 }
 
 document.querySelector('#search').onkeyup = (ev) => {
